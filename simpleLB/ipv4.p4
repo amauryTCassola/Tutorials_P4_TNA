@@ -151,7 +151,7 @@ control SwitchIngress(
         actions = {
             action_lb;
         }
-        size = 2
+        size = 2;
     }
 
     apply {
