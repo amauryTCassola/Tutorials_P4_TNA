@@ -145,7 +145,7 @@ control SwitchIngress(
     /* TODO: Define the table to match the LB parameters */
     table def_lb {
         key = {
-            hedr.ipv4.dst_addr: exact;
+            hdr.ipv4.dst_addr: exact;
             ig_md.output_lb: exact;
         }
         actions = {
@@ -161,7 +161,7 @@ control SwitchIngress(
         }
 
         /* TODO: Instantiate the register action */ 
-        in_md.output_lb = check_counter.execute(0);
+        ig_md.output_lb = check_counter.execute(0);
 
         /* TODO: Apply the table */
         def_lb.apply();
