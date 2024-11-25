@@ -123,7 +123,7 @@ control SwitchIngress(
 
             rv = value;
         }
-    }
+    };
 
     table ipv4_lpm {
         key = {
